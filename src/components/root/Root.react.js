@@ -13,7 +13,9 @@ class Root extends React.Component {
     return (
       <div>
         <Header />
-        <RouteHandler />
+        <div className="main-content">
+          <RouteHandler />
+        </div>
       </div>
     );
   }

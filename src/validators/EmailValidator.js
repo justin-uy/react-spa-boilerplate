@@ -12,6 +12,4 @@ class EmailValidator {
 
 }
 
-var instance = new EmailValidator();
-
-export default instance;
+export default new EmailValidator();
