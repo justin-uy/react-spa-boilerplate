@@ -1,32 +1,38 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var nodeModulesPath = path.join(__dirname, 'node_modules');
+
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './app/js/app.js'
+    './src/index.js'
   ],
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/app/js/'
+    publicPath: '/src/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    root: [nodeModulesPath],
+    extensions: ['', '.js', '.jsx', 'less']
+  },
+  resolveLoader: {
+    root: nodeModulesPath
   },
   module: {
     loaders: [{
       test: /\.js?$/,
       loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'app/js')
+      include: path.join(__dirname, 'src')
     },{
       test: /\.less$/,
-      loader: "style!css!less"
+      loader: 'style-loader!css-loader!less-loader'
     }]
   }
 };
