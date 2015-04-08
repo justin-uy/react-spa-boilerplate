@@ -4,7 +4,7 @@ react-spa-boilerplate
 Boilerplate for a React.js SPA:
 * Babel for transpiling ES6
 * Hot loader updating using react hot loader
-* Using react router and flux.
+* Using react router and flux. (Flux is not really demonstrated in the boilerplate, but it is already added as a dev dependency)
 * Tested by Jest
 * Styled with Less
 * Bundled by Webpack
@@ -32,7 +32,7 @@ ln -s index.html build/index.html
 
 ### Testing
 
-Jest is used for testing a preset to use babel to transpile ES6 code to ES5
+Jest is used for testing and is preset to use babel to transpile ES6 code to ES5
 
 ```
 npm test
