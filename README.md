@@ -1,18 +1,34 @@
 react-spa-boilerplate
 =====================
 
-Boilerplate for a React.js spa:
+Boilerplate for a React.js SPA:
+* Babel for transpiling ES6
+* Hot loader updating using react hot loader
 * Using react router and flux.
 * Tested by Jest
-* Powered by Webpack
+* Styled with Less
+* Bundled by Webpack
 
-### Usage
+### Run with hot loading for rapid layout development
 
 ```
 npm install
 npm start
 open http://localhost:3000
 ```
+
+### Build and run
+```
+npm run build
+
+#first time create symlink
+ln -s index.html build/index.html
+
+# You can add an nginx config which points to your build folder
+# This will be useful when integrating with APIs
+
+```
+
 
 ### Testing
 

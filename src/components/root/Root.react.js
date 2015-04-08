@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Router from 'react-router';
-import { Link } from 'react-router';
+import Header from '../header/Header.react';
 
 var RouteHandler = Router.RouteHandler;
 
@@ -12,8 +12,7 @@ class Root extends React.Component {
   render() {
     return (
       <div>
-        <Link to="home">Home</Link>
-        <Link to="other">Other</Link>
+        <Header />
         <RouteHandler />
       </div>
     );
